@@ -7,7 +7,20 @@ namespace CallCenter
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
+
+
         {
+            bundles.Add(new ScriptBundle("~/bundles/sweetalert2/js").Include(
+                       "~/Content/sweetaler2/sweetalert2.all.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/sweetalert2/css").Include(
+                      "~/Content/sweetaler2/sweetalert2.all.css"));
+
+
+
+
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -20,10 +33,13 @@ namespace CallCenter
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+         
+            "~/Scripts/bootstrap.js",
+            "~/Scripts/sweetalert.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                       "~/Content/sweetalert.css",
                       "~/Content/site.css"));
         }
     }
